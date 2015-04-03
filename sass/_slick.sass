@@ -28,7 +28,7 @@
 
 .slick-slider .slick-list,
 .slick-track,
-.slick-slide, 
+.slick-slide,
 .slick-slide img
 	-webkit-transform: translate3d(0, 0, 0)
 	-moz-transform: translate3d(0, 0, 0)
@@ -88,21 +88,11 @@
 		height: 50px
 		line-height: 50px
 .slick-prev
-	left: 0
-	&:before
-		content: "←"
-		display: inline-block
-		vertical-align: middle
-		font-size: 61px
-		color: #fff 
+	left: -23px
+	+s(slide-prev)
 .slick-next
-	right: 0
-	&:before
-		content: "→"
-		display: inline-block
-		vertical-align: middle
-		font-size: 61px
-		color: #fff 
+	right: -23px
+	+s(slide-next)
 .slick-dots
 	text-align: center
 	position: absolute
@@ -113,14 +103,14 @@
 	li
 		position: relative
 		display: inline-block
-		padding: 0 3px 
+		padding: 0 3px
 		&.slick-active
 			button
 				opacity: 0.3
 				box-shadow: none
 		&:before
-			display: none 
-				 
+			display: none
+
 	button
 		display: block
 		width: 6px
@@ -129,7 +119,6 @@
 		+box-shadow(0 1px 5px rgba(0,0,0,.25))
 		cursor: pointer
 		+hide-text
-		border-radius: 50% 
+		border-radius: 50%
 		&:hover
 			box-shadow: none
-	

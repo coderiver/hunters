@@ -1,216 +1,309 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.l-wrap
+	&.with-bg
+		background-color: #CCC
+		background: url('../img/icons/section.png') top center repeat
+
+//header
+.header
+	overflow: hidden
+	.l-center
+		position: relative
+	.header-bg
+		position: absolute
+		top: 0
+		left: -448px
+		width: 1920px
+		height: 119px
+		background: url('../img/header-bg.png') top center no-repeat
+		z-index: 1
+	.header__in
+		position: relative
+		padding-left: 217px
+		z-index: 1
+		+box
+		+clr
+
+.logo
+	position: relative
+	float: left
+	margin: 17px 0 0 62px
+	z-index: 2
+	img
+		width: 155px
+		height: 155px
+
+.name
+	margin: 18px 0 0 15px
+	.name__txt
+		margin-top: -5px
+		padding-left: 10px
+		font-size: 10.5px
+		color: #FFF
+		+transform(rotate(-2.5deg))
+		+rus
+		span
+			text-transform: uppercase
+
+.balls
+	margin: 13px 0 0 8px
+	img
+		width: 144px
+		height: 76px
+	+r(650)
+		display: none
+
+.huntersluga
+	margin: 15px 6px 0 0
+	div
+		display: inline-block
+		vertical-align: top
+		+hide-text
+	.huntersluga__slogan
+		margin: 5px 15px 0 0
+		width: 152px
+		height: 41px
+		background: url('../img/slogan.png') no-repeat
+	.huntersluga__img
+		width: 185px
+		height: 40px
+		background: url('../img/huntersluga.png') no-repeat
+	+r(1000)
+		display: none
+
+
+//navigation
+.navigation
+	position: relative
+	margin-top: -60px
+	padding-bottom: 25px
+	z-index: 1
+	+box
+	+box-shadow(inset 0px -2.4px 0px 0px rgba(0, 0, 0, 0.3))
+	.navigation__in
+		background: rgba(#fff, 0.5)
+		border-top: 3px solid #76a586
+		border-bottom: 3px solid #76a586
+	.l-center
+		+clr
+	.navigation__address
+		margin-top: -24px
+		font-size: 11.5px
+		color: #005D20
+		+rus
+	.helmet_ico
+		display: inline-block
+		margin: 3px 0 3px 12px
+		+s(helmet_ico)
+	.navigation__inner
+		min-height: 43px
+		+clr
+	.navigation__menu
+		margin: 7px 10px 0 0
+		li
+			float: left
+			margin-left: 5px
+			&:first-child
+				margin-left: 0
+	.menu__link
+		position: relative
+		display: block
+		padding: 5px 15px
+		color: #4A4A49
+		font-family: "Tahoma", Arial, sans-serif
+		font-size: 11px
+		font-weight: bold
+		text-decoration: none
+		background: url('../img/icons/link-bg.png') repeat
+		border-radius: 2px
+		+box-shadow(2.5px 4.3px 6.5px 0.5px rgba(0, 0, 0, 0.3), 0 0 4.1px 0.9px rgba(255, 255, 190, 0.44), inset 1px 1px 0.5px 1px rgba(255, 255, 255, 0.7), inset -1px -1px 0.5px 1px rgba(255, 255, 255, 0.7))
+		&:hover
+			color: #017C2B
+			background: url('../img/icons/link-bg-h.png') repeat
+
+	.navigation__social
+		margin-top: 7px
+		font-size: 0
+		a
+			display: inline-block
+			margin-left: 3px
+			&:first-child
+				margin-left: 0
+		.vk_ico
+			+s(vk_ico)
+		.ok_ico
+			+s(ok_ico)
+		.fb_ico
+			+s(fb_ico)
+
+
+//main slider
+.main-slider
+	margin-top: 15px
+	padding: 0 25px 35px
+	+box
+	.js-slick
+		max-width: 995px
+		margin: 0 auto
+		border: 6px solid #005D20
+		+box
+	.slick-slide
+		max-height: 350px
+		background-repeat: no-repeat
+		+cover
+	.slick-dots
+		bottom: -31px
+		li
+			&.slick-active
+				button
+					+opacity(1)
+					+s(dot-bg-h)
+		button
+			+s(dot-bg)
+			+box-shadow(none)
+
+//about
+.about
+	border-top: 1px solid #8E8E8E
+	.about__head
+		position: relative
+		min-height: 100px
+		background: url('../img/icons/about-bg.png') top center no-repeat
+		z-index: 1
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+		+clr
+		.name
+			margin: 10px 35px 0 0
+			color: rgba(#FFF, 0.7)
+			font-size: 15px
+			+rus
+			.name__huntersluga
+				margin-top: -2px
+				padding-right: 3px
+				+transform(rotate(-3deg))
+	.about__body
+		position: relative
+		max-width: 950px
+		margin: -10px auto 0
+		padding: 0 15px
+		background: #DFFDDB
+		z-index: 0
+		+box
+		+clr
+	.about__img
+		position: relative
+		margin-top: 20px
+		max-width: 422px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 80%
+			bottom: 15px
+			width: 50%
+			background: #5a6658
+			z-index: -1
+			+box-shadow(0 22px 25px rgba(#000, 0.7))
+		&:before
+			left: 5px
+			+transform(rotate(-5deg))
+		&:after
+			right: 5px
+			+transform(rotate(5deg))
+		img
+			width: 100%
+	.about__txt
+		padding: 28px 0 10px 10px
+		color: #072603
+		font-family: "Verdana", Arial, sans-serif
+		font-size: 12px
+		text-align: justify
+		overflow: hidden
+		line-height: 1.2
+		+box
+		p
+			text-indent: 3.5em
+			margin-bottom: 15px
+		.is-big
+			font-size: 14px
+	.about__bottom
+		position: relative
+		max-width: 950px
+		margin: 12px auto 0
+		padding: 15px 22px 20px
+		background: #021909
+		line-height: 1.2
+		+box
+		+clr
+		&:before
+			content: ""
+			position: absolute
+			top: -8px
+			left: 0
+			width: 100%
+			height: 4px
+			background: #021909
+			border: 1px solid #89938c
+			+box
+	.info_ico
+		display: block
+		margin-top: 10px
+		+s(info_ico)
+	.about__bl
+		margin-left: 20px
+		color: #FFF
+		font-family: "Verdana", Arial, sans-serif
+		font-size: 13px
+		font-weight: bold
+		h3, p
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+		a
+			padding: 2px 3px
+			font-size: 11px
+			text-transform: uppercase
+			text-decoration: none
+			color: #250CA1
+			background: #FFF
+			&:first-child
+				margin: 0 2px 0 10px
+		.txt-red
+			color: #D6131C
+	+r(650)
+		.name
+			display: none
+
+
+.title
+	margin: 15px 0 0 45px
+	h2
+		display: inline-block
+		color: #FFF
+		font-family: "Verdana", Verdana, Arial, sans-serif
+		font-size: 34px
+		font-weight: bold
+		text-transform: uppercase
+		vertical-align: middle
+	.title_ico
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+		+s(logo_ico)
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			+box-shadow(1px -1px 20px 0 #33473a, -1px 1px 20px 0 #33473a, 1px -1px 10px 0 #fdfdfd, -1px 1px 10px 0 #fdfdfd)
+
+// .sign
+// 	position: relative
+// 	max-width: 469px
+// 	height: 91px
+// 	img
+// 		width: 100%
+// 		height: 100%
