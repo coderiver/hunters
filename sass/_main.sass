@@ -191,7 +191,7 @@
 		+clr
 	.about__img
 		position: relative
-		margin-top: 20px
+		margin: 20px 15px 20px 0
 		max-width: 422px
 		&:before,
 		&:after
@@ -212,12 +212,11 @@
 		img
 			width: 100%
 	.about__txt
-		padding: 28px 0 10px 10px
+		padding: 28px 0 10px
 		color: #072603
 		font-family: "Verdana", Arial, sans-serif
 		font-size: 12px
 		text-align: justify
-		overflow: hidden
 		line-height: 1.2
 		+box
 		p
@@ -300,10 +299,311 @@
 			border-radius: 50%
 			+box-shadow(1px -1px 20px 0 #33473a, -1px 1px 20px 0 #33473a, 1px -1px 10px 0 #fdfdfd, -1px 1px 10px 0 #fdfdfd)
 
-// .sign
-// 	position: relative
-// 	max-width: 469px
-// 	height: 91px
-// 	img
-// 		width: 100%
-// 		height: 100%
+.name
+	margin: 10px 35px 0 0
+	color: rgba(#FFF, 0.7)
+	font-size: 15px
+	+rus
+	.name__huntersluga
+		margin-top: -2px
+		padding-right: 3px
+		+transform(rotate(-3deg))
+
+.sign
+	position: absolute
+	width: 469px
+	height: 91px
+	left: 50%
+	margin-left: -200px
+	background: url('../img/icons/line2.png') center center no-repeat
+	&:before
+		content: ""
+		position: absolute
+		top: 35px
+		left: 40%
+		+s(helmet_ico2)
+	+r(1000)
+		width: 40%
+		left: 55%
+		-webkit-background-size: contain
+		-o-background-size: contain
+		background-size: contain
+		&:before
+			left: 42%
+
+//news section
+.news
+	background: url(../img/news-bg.jpg) top center no-repeat
+	border-top: 1px solid #8E8E8E
+	+cover
+	.news__head
+		position: relative
+		min-height: 100px
+		background: url('../img/icons/news-bg.png') top center no-repeat
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+		&:before
+			content: ""
+			position: absolute
+			top: -12px
+			left: 12px
+			z-index: -1
+			+s(news-before)
+		&:after
+			content: ""
+			position: absolute
+			top: -11px
+			right: 10px
+			z-index: -1
+			+s(news-after)
+	.news__in
+		+clr
+	.news__body
+		max-width: 970px
+		margin: 0 auto
+		text-align: center
+		font-size: 0
+	.news__column
+		display: inline-block
+		width: 33%
+		padding: 0 15px
+		vertical-align: top
+		+box
+	.news__bl
+		position: relative
+		margin-bottom: 10px
+		font-family: "Verdana", Arial, sans-serif
+		line-height: 1.2
+		&:before
+			content: ""
+			position: absolute
+			top: -20px
+			left: 50%
+			margin-left: -54px
+			+s(news-divide)
+		&:hover
+			.news__txt
+				text-decoration: underline
+		&.is-last
+			margin-bottom: 15px
+			.news__link
+				text-align: center
+				padding: 30px 0 20px
+				font-size: 22px
+				font-style: italic
+				color: #30B55A
+				&:hover
+					color: darken(#30B55A, 10%)
+	.news__title
+		height: 71px
+		margin-top: -12px
+		padding: 20px
+		text-align: center
+		font-size: 22px
+		text-transform: uppercase
+		color: #FFF
+		background-color: #34C462
+		background: url('../img/icons/news_title-bg.png') top center no-repeat
+		+box
+	.news__link
+		display: block
+		padding: 30px 35px 35px
+		background: #FFF
+		text-decoration: none
+		color: #033613
+		font-size: 21px
+		+box
+		span
+			display: block
+			text-align: center
+	.news__txt
+		margin: 20px 0 30px 10px
+		text-align: left
+		&.is-upper
+			max-height: inherit
+			margin: 0 0 10px
+			text-transform: uppercase
+			text-align: center
+		&.txt-red
+			color: #FB0E02
+	.news__img
+		display: block
+		width: 145px
+		height: 100px
+		margin: 0 auto 15px
+		img
+			width: 100%
+			height: 100%
+	.news__date
+		font-size: 20px
+		font-style: italic
+		color: #A9AAAA
+	.news__inside
+		margin: 14px 0
+		text-align: left
+		color: #268A2E
+		font-size: 12px
+		+clr
+		span
+			text-align: left
+			font-weight: bold
+		p
+			padding-left: 10px
+			overflow: hidden
+	+r(1000)
+		.news__link
+			padding: 30px 5% 35px
+		.news__title
+			height: auto
+			margin-bottom: 10px
+			background: #2fb259
+			+box-shadow(2.5px 4.3px 5px rgba(0, 0, 0, 0.75))
+	+r(800)
+		.news__column
+			width: 40%
+			margin-bottom: 20px
+
+
+//statistic section
+.stat
+	border-top: 1px solid #8E8E8E
+	+cover
+	.stat__head
+		min-height: 100px
+		background: url('../img/icons/stat-bg.png') top center no-repeat
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+	.stat__body
+		display: table
+		width: 100%
+		margin-top: 15px
+		font-family: "Verdana", Arial, sans-serif
+		font-size: 0
+	.stat__bl
+		display: table-cell
+		padding: 0 30px
+		text-align: center
+		vertical-align: top
+		font-size: 12px
+		border-right: 1px solid #D8D8D8
+		+box
+		&:last-child
+			border-right: none
+		h2
+			margin-bottom: 15px
+			color: #033613
+			font-size: 21px
+			text-transform: uppercase
+		h3
+			margin-bottom: 10px
+			font-size: 13px
+			font-weight: bold
+			text-transform: uppercase
+			letter-spacing: 0.05em
+		.txt-red
+			color: #cc0000
+		.txt-green
+			color: #6d9917
+		.txt-orange
+			color: #FC8C0C
+	.stat__img
+		margin-bottom: 15px
+	.stat__date
+		margin-bottom: 10px
+		text-transform: uppercase
+		font-weight: bold
+	.stat__count
+		width: 240px
+		margin: 25px auto 0
+		+clr
+	.stat__name
+		width: 70px
+		text-align: center
+		line-height: 1.5
+		img
+			max-width: 50px
+			max-height: 50px
+			margin-bottom: 10px
+			padding: 2px
+			border: 1px solid #cdcdcd
+	.stat__place
+		span
+			display: block
+	.stat__score
+		width: 35px
+		height: 25px
+		margin: 10px 0 0 32px
+		background: #F2F2F2
+		border: 1px solid #cdcdcd
+		border-radius: 2px
+		line-height: 25px
+	.stat__wrap
+		margin: 10px 0 0 10px
+		font-size: 0
+		.stat__score
+			display: inline-block
+			margin: 0 0 0 5px
+			font-size: 14px
+			&:first-child
+				margin-left: 0
+	.stat__in
+		margin-bottom: 20px
+	.stat__line
+		margin: 10px 0
+		padding: 15px
+		width: 100%
+		border: 1px solid #dedede
+		+box
+		i
+			display: inline-block
+			width: 100%
+			height: 5px
+			background: #FC8C0C
+			border-bottom: 1px solid #b5660d
+		&.is-result
+			position: relative
+			margin-top: 15px
+			i
+				position: relative
+				width: 50%
+				background: #CC0C0C
+				border-bottom-color: #930d0d
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					width: 50%
+					height: 5px
+					background: #6D9917
+					border-bottom: 1px solid #50720d
+	.stat__shoot,
+	.stat__miss
+		position: absolute
+		top: -7px
+		width: 80px
+		padding: 10px 0
+		background: #F2F2F2
+		border-radius: 5px
+		+box
+		+box-shadow(2px 1px 3px 0px #d2d2d2, -2px 1px 3px 0px #d2d2d2)
+	.stat__shoot
+		left: -20px
+	.stat__miss
+		right: -20px
+	.stat__player
+		padding: 5px
+		text-align: left
+		font-size: 12px
+		color: #268a2e
+		border-radius: 5px
+		text-transform: uppercase
+		+box-shadow(2px 2px 3px 0px #d2d2d2)
+		+clr
+		+box
+		p
+			&.is-first
+				margin-bottom: 5px
+				text-transform: none
+		img
+			width: 72px
+			height: 72px
+			margin-right: 10px

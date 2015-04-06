@@ -8,110 +8,284 @@ html
 		<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 		title main
 	body
-		.l-wrap.with-bg
-			header.header
-				.l-center
-					.header-bg
-					a(href="#").logo
-						img(src="img/logo.png" alt="Hunters logo")
-					.header__in
-						.onleft.name
-							img.name__img(src="img/name.png" alt="Hunters name")
-							p.name__txt
-								| Клуб по Американскому футболу
-								span  Hunters
-						.onleft.balls
-							img(src="img/balls.png" alt="Balls")
-						.onright.huntersluga
-							.huntersluga__slogan
-								| Наберись духа...Встретимся на поле!
-							.huntersluga__img
-								| huntersluga.ru
-			.navigation
-				.navigation__in
+		.out
+			.l-wrap.with-bg
+				header.header
 					.l-center
-						p.onright.navigation__address
-							| Ленинградская область, г. Луга, СК «ОХОТНИКИ»
-						.navigation__inner
-							i.helmet_ico
-							.onright.navigation__social
-								a.vk_ico(href="#")
-								a.ok_ico(href="#")
-								a.fb_ico(href="#")
-							ul.onright.navigation__menu
-								li
-									a.menu__link(href="#") О клубе
-								li
-									a.menu__link(href="#") Новости
-								li
-									a.menu__link(href="#") Статистика
-								li
-									a.menu__link(href="#") Команда
-								li
-									a.menu__link(href="#") Расписание
-								li
-									a.menu__link(href="#") Фото
-								li
-									a.menu__link(href="#") Видео
-								li
-									a.menu__link(href="#") Контакты
-			.l-center
-				.main-slider
-					.js-slick
-						div.slide(style = "background-image: url('img/photos/slide1.jpg');")
-						div.slide(style = "background-image: url('img/photos/slide1.jpg');")
-						div.slide(style = "background-image: url('img/photos/slide1.jpg');")
-		.l-wrap
-			.about
+						.header-bg
+						a(href="#").logo
+							img(src="img/logo.png" alt="Hunters logo")
+						.header__in
+							.onleft.name
+								img.name__img(src="img/name.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+							.onleft.balls
+								img(src="img/balls.png" alt="Balls")
+							.onright.huntersluga
+								.huntersluga__slogan
+									| Наберись духа...Встретимся на поле!
+								.huntersluga__img
+									| huntersluga.ru
+				.navigation
+					.navigation__in
+						.l-center
+							p.onright.navigation__address
+								| Ленинградская область, г. Луга, СК «ОХОТНИКИ»
+							.navigation__inner
+								i.helmet_ico
+								.onright.navigation__social
+									a.vk_ico(href="#")
+									a.ok_ico(href="#")
+									a.fb_ico(href="#")
+								ul.onright.navigation__menu
+									li
+										a.menu__link(href="about") О клубе
+									li
+										a.menu__link(href="news") Новости
+									li
+										a.menu__link(href="stat") Статистика
+									li
+										a.menu__link(href="team") Команда
+									li
+										a.menu__link(href="schedule") Расписание
+									li
+										a.menu__link(href="photo") Фото
+									li
+										a.menu__link(href="video") Видео
+									li
+										a.menu__link(href="contacts") Контакты
 				.l-center
-					.about__head
-						.onleft.title
-							i.title_ico
-							h2 О клубе
-						//- .onleft.sign
-						//- 		img(src="img/icons/line.png" alt="Line")
-						.onright.name
-							img.name__img(src="img/name2.png" alt="Hunters name")
-							p.name__txt
-								| Клуб по Американскому футболу
-								span  Hunters
-							p.onright.name__huntersluga
-								| huntersluga.ru
-					.about__body
-						.onleft.about__img
-							img(src="img/photos/about.jpg" alt="О клубе")
-						.about__txt
-							p.
-								Идея создания клуба по Американскому Футболу появилась в июне 2010 года.
-								Мы хотели, чтобы ребята, выбирая этот интересный и динамичный вид спорта, занимались в комфортных условиях, с опытным тренерским составом, в доброжелательной обстановке, без интриг и давления на игроков.
-								Мы собрали инициативных увлеченных Американским Футболом людей, которые имеют возможность и хотят развиваться как конкурентно-способная играющая команда. Так, 1 сентября 2010г. был официально зарегистрирован РОО СК Кабаны.
-								Этот день считается ДНЕМ РОЖДЕНИЯ КЛУБА.
-							p.is-big.
-								<i>“Развитие Американского Футбола в России, по нашему мнению, напрямую зависит от того, образуются ли новые команды, которые составят здоровую конкуренцию уже существующим и дадут возможность новым игрокам проявить себя.
-								Именно в этом суть популяризации Американского Футбола.”</i>
-							p.
-								Цель Клуба – создание такой команды, где игроки разных возрастов от 7 до 40 лет смогут выявить и реализовать через игру в Американский Футбол свои положительные качества.
-								Постоянные тренировки и взаимодействия с другими игроками дают возможность расти в спортивном и личностном плане.
-					.about__bottom
-						i.onleft.info_ico
-						.onleft.about__bl
-							h3 <i>“Про Американский Футбол</i>
-							p
-								| История АФ <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-							p
-								| Знакомство с АФ <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-						.onleft.about__bl
-							h3 <i>“Команда мастеров</i>
-							p
-								| Условия вступления <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-							p
-								| Официальные документы <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-						.onleft.about__bl
-							h3 <i>“Детская команда</i>
-							p
-								| Условия вступления <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-							p
-								| Официальные документы <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-
+					.main-slider
+						.js-slick
+							div.slide(style = "background-image: url('img/photos/slide1.jpg');")
+							div.slide(style = "background-image: url('img/photos/slide1.jpg');")
+							div.slide(style = "background-image: url('img/photos/slide1.jpg');")
+			.l-wrap
+				.about
+					.l-center
+						.about__head
+							.onleft.title
+								i.title_ico
+								h2 О клубе
+							.sign
+							.onright.name
+								img.name__img(src="img/name2.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+								p.onright.name__huntersluga
+									| huntersluga.ru
+						.about__body
+							.onleft.about__img
+								img(src="img/photos/about.jpg" alt="О клубе")
+							.about__txt
+								p.
+									Идея создания клуба по Американскому Футболу появилась в июне 2010 года.
+									Мы хотели, чтобы ребята, выбирая этот интересный и динамичный вид спорта, занимались в комфортных условиях, с опытным тренерским составом, в доброжелательной обстановке, без интриг и давления на игроков.
+									Мы собрали инициативных увлеченных Американским Футболом людей, которые имеют возможность и хотят развиваться как конкурентно-способная играющая команда. Так, 1 сентября 2010г. был официально зарегистрирован РОО СК Кабаны.
+									Этот день считается ДНЕМ РОЖДЕНИЯ КЛУБА.
+								p.is-big.
+									<i>“Развитие Американского Футбола в России, по нашему мнению, напрямую зависит от того, образуются ли новые команды, которые составят здоровую конкуренцию уже существующим и дадут возможность новым игрокам проявить себя.
+									Именно в этом суть популяризации Американского Футбола.”</i>
+								p.
+									Цель Клуба – создание такой команды, где игроки разных возрастов от 7 до 40 лет смогут выявить и реализовать через игру в Американский Футбол свои положительные качества.
+									Постоянные тренировки и взаимодействия с другими игроками дают возможность расти в спортивном и личностном плане.
+						.about__bottom
+							i.onleft.info_ico
+							.onleft.about__bl
+								h3 <i>“Про Американский Футбол</i>
+								p
+									| История АФ <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								p
+									| Знакомство с АФ <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+							.onleft.about__bl
+								h3 <i>“Команда мастеров</i>
+								p
+									| Условия вступления <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								p
+									| Официальные документы <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+							.onleft.about__bl
+								h3 <i>“Детская команда</i>
+								p
+									| Условия вступления <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								p
+									| Официальные документы <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+			.l-wrap
+				.news
+					.l-center
+						.news__head
+							.news__in
+								.onleft.title
+									i.title_ico
+									h2 Новости
+								.sign
+								.onright.name
+									img.name__img(src="img/name2.png" alt="Hunters name")
+									p.name__txt
+										| Клуб по Американскому футболу
+										span  Hunters
+									p.onright.name__huntersluga
+										| huntersluga.ru
+						.news__body
+							.news__column
+								h2.news__title Новостные статьи
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt
+											| В Луге прошел товарищеский матч ДЛАФ СПБ по флаг-футболу...
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt
+											| В Луге прошел товарищеский матч ДЛАФ СПБ по флаг-футболу...
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt
+											| В Луге прошел товарищеский матч ДЛАФ СПБ по флаг-футболу...
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl.is-last
+									a.news__link(href="#")
+										p
+											| <span>Архив</span>новостных статей
+							.news__column
+								h2.news__title Новости клуба
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt.is-upper
+											| Новый сезон
+										img.news__img(src="img/photos/news.jpg" alt="news")
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt.is-upper
+											| Новый сезон
+										img.news__img(src="img/photos/about.jpg" alt="news")
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt.is-upper
+											| Новый сезон
+										img.news__img(src="img/photos/news.jpg" alt="news")
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl.is-last
+									a.news__link(href="#")
+										p
+											| <span>Архив</span>новостей клуба
+							.news__column
+								h2.news__title Новости команды
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt.is-upper.txt-red
+											| День рождения
+										.news__inside
+											img.onleft(src="img/photos/news2.jpg" alt="news")
+											p Тренер <span>Iris</span><span>Burton</span>
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt.is-upper.txt-red
+											| День рождения
+										.news__inside
+											img.onleft(src="img/photos/news3.jpg" alt="news")
+											p Cornerback <span>Максим</span><span>Холодницкий</span>
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl
+									a.news__link(href="#")
+										p.news__txt.is-upper.txt-red
+											| День рождения
+										.news__inside
+											img.onleft(src="img/photos/news2.jpg" alt="news")
+											p Тренер <span>Iris</span><span>Burton</span>
+										span.news__date
+											| 11 сентября 2011 г.
+								.news__bl.is-last
+									a.news__link(href="#")
+										p
+											| <span>Архив</span> новостей команды
+			.l-wrap
+				.stat
+					.l-center
+						.stat__head
+							.onleft.title
+								i.title_ico
+								h2 Статистика
+							.sign
+							.onright.name
+								img.name__img(src="img/name2.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+								p.onright.name__huntersluga
+									| huntersluga.ru
+						.stat__body
+							.stat__bl
+								img.stat__img(src="img/stat.jpg" alt="stat")
+								h2 <b>Предстоящие игры</b>
+								p.stat__date
+									| 11 сентября, 12:00
+								p.stat__place
+									| Стадион, г. Луга. угол ул. Школьной и <span>Я. Фабрициуса</span>
+								.stat__count
+									.stat__name.onleft
+										img(src="img/logo_small.png" alt="hunters logo")
+										p Лужские охотники
+									.stat__score.onleft
+									.stat__name.onright
+										img(src="img/hogs_logo.png" alt="hogskids logo")
+										p HogsKids
+							.stat__bl
+								h2 Проведенные игры
+								p.stat__date
+									| 11 сентября, 12:00
+								p.stat__place
+									| Стадион, г. Луга. угол ул. Школьной и <span>Я. Фабрициуса</span>
+								.stat__count
+									.stat__name.onleft
+										img(src="img/logo_small.png" alt="hunters logo")
+										p Лужские охотники
+									.stat__wrap.onleft
+										.stat__score
+											| 24
+										.stat__score
+											| 24
+									.stat__name.onright
+										img(src="img/hogs_logo.png" alt="hogskids logo")
+										p HogsKids
+							.stat__bl
+								.stat__in
+									h3 Статистика команды
+									p Игр сыграно: <b>1</b>
+									.stat__line
+										i
+									p
+										| Победы <span class="txt-green"><b>0</b></span> Ничьи	<span class="txt-orange"><b>1</b></span> Поражения <span class="txt-red"><b>0</b></span>
+								.stat__in
+									h3 Результативность
+									.stat__line.is-result
+										.stat__shoot
+											p.txt-green 24
+											p Забито
+										i
+										.stat__miss
+											p.txt-red 24
+											p Пропущено
+								.stat__in
+									h3 Игроки
+									.stat__player
+										img.onleft(src="img/photos/news3.jpg" alt="player")
+										p.is-first Cornerback
+										p Максим
+										p Холодницкий
 
 		script(src="js/lib/head.js", data-headjs-load="js/init.js")
