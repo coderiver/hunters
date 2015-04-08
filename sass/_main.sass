@@ -22,6 +22,32 @@
 		z-index: 1
 		+box
 		+clr
+	.name
+		margin: 15px 0 0 10px
+	+r(1000)
+		.balls
+			display: none
+
+.name
+	margin: 10px 35px 0 0
+	color: rgba(#FFF, 0.7)
+	font-size: 15px
+	+rus
+	.name__huntersluga
+		margin-top: -2px
+		padding-right: 3px
+		+transform(rotate(-3deg))
+	.name__txt
+		margin-top: -5px
+		padding-left: 10px
+		font-size: 10.5px
+		color: #FFF
+		+transform(rotate(-2.5deg))
+		+rus
+		span
+			text-transform: uppercase
+	+r(650)
+		display: none
 
 .logo
 	position: relative
@@ -32,20 +58,8 @@
 		width: 155px
 		height: 155px
 
-.name
-	margin: 18px 0 0 15px
-	.name__txt
-		margin-top: -5px
-		padding-left: 10px
-		font-size: 10.5px
-		color: #FFF
-		+transform(rotate(-2.5deg))
-		+rus
-		span
-			text-transform: uppercase
-
 .balls
-	margin: 13px 0 0 8px
+	margin: 12px 0 0 14px
 	img
 		width: 144px
 		height: 76px
@@ -59,7 +73,7 @@
 		vertical-align: top
 		+hide-text
 	.huntersluga__slogan
-		margin: 5px 15px 0 0
+		margin-top: 4px
 		width: 152px
 		height: 41px
 		background: url('../img/slogan.png') no-repeat
@@ -67,7 +81,7 @@
 		width: 185px
 		height: 40px
 		background: url('../img/huntersluga.png') no-repeat
-	+r(1000)
+	+r(860)
 		display: none
 
 
@@ -257,7 +271,15 @@
 			margin-bottom: 10px
 			&:last-child
 				margin-bottom: 0
+	.about__links
+		margin-bottom: 10px
+		span
+			display: inline-block
+			margin-right: 10px
+	.links__wrap
+		display: inline-block
 		a
+			display: inline-block
 			padding: 2px 3px
 			font-size: 11px
 			text-transform: uppercase
@@ -265,12 +287,38 @@
 			color: #250CA1
 			background: #FFF
 			&:first-child
-				margin: 0 2px 0 10px
-		.txt-red
-			color: #D6131C
+				margin-right: 2px
+			&.txt-red
+				color: #cc0000
+	+r(920)
+		.about__bl
+			width: 30%
+			margin-left: 0
+		.about__links
+			margin-bottom: 6px
+			span
+				margin-bottom: 4px
+		.info_ico
+			margin-right: 20px
+	+r(860)
+		.about__bl
+			width: 29%
+			padding: 0 2%
+		.info_ico
+			display: none
 	+r(650)
+		.about__bl
+			float: none
+			width: 100%
+			margin-bottom: 20px
+			padding: 0
+			text-align: center
 		.name
 			display: none
+		.about__img
+			float: none
+			margin: 0 auto 10px
+			padding-top: 25px
 
 
 .title
@@ -298,16 +346,15 @@
 			height: 100%
 			border-radius: 50%
 			+box-shadow(1px -1px 20px 0 #33473a, -1px 1px 20px 0 #33473a, 1px -1px 10px 0 #fdfdfd, -1px 1px 10px 0 #fdfdfd)
-
-.name
-	margin: 10px 35px 0 0
-	color: rgba(#FFF, 0.7)
-	font-size: 15px
-	+rus
-	.name__huntersluga
-		margin-top: -2px
-		padding-right: 3px
-		+transform(rotate(-3deg))
+	+r(650)
+		float: none
+		margin: 0
+		padding-top: 17px
+		text-align: center
+		h2
+			font-size: 30px
+		.title_ico
+			margin-right: 10px
 
 .sign
 	position: absolute
@@ -330,6 +377,8 @@
 		background-size: contain
 		&:before
 			left: 42%
+	+r(860)
+		display: none
 
 //news section
 .news
@@ -421,10 +470,7 @@
 		&.is-upper
 			max-height: inherit
 			margin: 0 0 10px
-			text-transform: uppercase
 			text-align: center
-		&.txt-red
-			color: #FB0E02
 	.news__img
 		display: block
 		width: 145px
@@ -458,15 +504,19 @@
 			background: #2fb259
 			+box-shadow(2.5px 4.3px 5px rgba(0, 0, 0, 0.75))
 	+r(800)
+		.news__body
+			max-width: inherit
 		.news__column
-			width: 40%
+			width: 50%
 			margin-bottom: 20px
+	+r(650)
+		.news__column
+			width: 100%
 
 
 //statistic section
 .stat
 	border-top: 1px solid #8E8E8E
-	+cover
 	.stat__head
 		min-height: 100px
 		background: url('../img/icons/stat-bg.png') top center no-repeat
@@ -474,12 +524,14 @@
 	.stat__body
 		display: table
 		width: 100%
-		margin-top: 15px
+		max-width: 930px
+		margin: 15px auto 0
 		font-family: "Verdana", Arial, sans-serif
 		font-size: 0
 	.stat__bl
 		display: table-cell
-		padding: 0 30px
+		width: 33%
+		padding: 0 15px
 		text-align: center
 		vertical-align: top
 		font-size: 12px
@@ -487,6 +539,8 @@
 		+box
 		&:last-child
 			border-right: none
+		&.is-small-width
+			width: 10%
 		h2
 			margin-bottom: 15px
 			color: #033613
@@ -498,12 +552,6 @@
 			font-weight: bold
 			text-transform: uppercase
 			letter-spacing: 0.05em
-		.txt-red
-			color: #cc0000
-		.txt-green
-			color: #6d9917
-		.txt-orange
-			color: #FC8C0C
 	.stat__img
 		margin-bottom: 15px
 	.stat__date
@@ -563,7 +611,7 @@
 			margin-top: 15px
 			i
 				position: relative
-				width: 50%
+				width: 40%
 				background: #CC0C0C
 				border-bottom-color: #930d0d
 				&:before
@@ -583,12 +631,13 @@
 		padding: 10px 0
 		background: #F2F2F2
 		border-radius: 5px
+		z-index: 2
 		+box
 		+box-shadow(2px 1px 3px 0px #d2d2d2, -2px 1px 3px 0px #d2d2d2)
 	.stat__shoot
-		left: -20px
+		left: 0
 	.stat__miss
-		right: -20px
+		right: 0
 	.stat__player
 		padding: 5px
 		text-align: left
@@ -596,14 +645,325 @@
 		color: #268a2e
 		border-radius: 5px
 		text-transform: uppercase
-		+box-shadow(2px 2px 3px 0px #d2d2d2)
+		+box-shadow(2px 2px 3px 0px #d2d2d2, -2px 0px 3px 0px #d2d2d2)
 		+clr
 		+box
-		p
-			&.is-first
-				margin-bottom: 5px
-				text-transform: none
 		img
 			width: 72px
 			height: 72px
 			margin-right: 10px
+	.stat__txt
+		padding-top: 5px
+		overflow: hidden
+		p
+			&:first-child
+				margin-bottom: 5px
+				text-transform: none
+	+r(860)
+		.stat__body
+			display: block
+		.stat__bl
+			display: block
+			width: 50%
+			margin: 20px auto 0
+			padding-bottom: 20px
+			border-right: none
+			border-bottom: 1px solid #D8D8D8
+			&.is-small-width
+				width: 50%
+	+r(600)
+		.stat__bl
+			width: 100%
+			&.is-small-width
+				width: 100%
+
+//team
+.team
+	border-top: 1px solid #8E8E8E
+	.team__head
+		min-height: 100px
+		background: url('../img/icons/team-bg.png') top center no-repeat
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+	.team__body
+		max-width: 940px
+		margin: 0 auto
+		border-top: none
+		border: 1px solid #CCC
+	.team__title
+		font-size: 20px
+		padding: 10px 0
+		text-align: center
+		text-transform: uppercase
+		background: #E9E9E9
+		border-top: 1px solid #CCC
+		border-bottom: 1px solid #CCC
+	.team__in
+		background: url(../img/icons/section2.png) repeat
+		padding: 18px 10% 45px
+		+box
+		+clr
+		&.another-padding
+			padding: 10px 5% 40px
+			.team__bl
+				width: auto
+				margin-right: 0
+	.team__bl
+		width: 355px
+		text-align: center
+		+clr
+		h4
+			margin-bottom: 15px
+			text-transform: uppercase
+			letter-spacing: 0.05em
+			overflow: hidden
+		span
+			position: relative
+			padding: 0 10px
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				width: 100%
+				min-width: 1000px
+				height: 1px
+				background: #D8D8D8
+				border-bottom: 1px solid #fff
+			&:before
+				left: 100%
+			&:after
+				right: 100%
+	.team__person
+		height: 158px
+		margin: 0 5px 10px
+		padding: 5px
+		text-align: left
+		font-size: 12px
+		color: #268a2e
+		background: #fff
+		overflow: hidden
+		border-radius: 5px
+		+box-shadow(2px 2px 3px 0px #d2d2d2, -2px 0px 3px 0px #d2d2d2)
+		+box
+		.team__img
+			width: 96px
+			height: 96px
+			margin-bottom: 5px
+		img
+			max-width: 96px
+			max-height: 96px
+	+r(920)
+		.team__in
+			padding: 18px 5% 45px
+		.team__bl
+			float: none
+			margin: 0 auto 15px
+	+r(650)
+		.team__bl
+			width: 100%
+
+//schedule
+.schedule
+	border-top: 1px solid #8E8E8E
+	.schedule__head
+		min-height: 100px
+		background: url('../img/icons/schedule-bg.png') top center no-repeat
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+
+
+//video
+.video
+	border-top: 1px solid #8E8E8E
+	.video__head
+		min-height: 100px
+		background: url('../img/icons/video-bg.png') top center no-repeat
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+	.video__body
+		max-width: 960px
+		margin: 0 auto
+		padding: 30px 10px
+		+box
+	.video__in
+		max-width: 845px
+		margin: 0 auto
+		+clr
+	.video__bl
+		position: relative
+		width: 50%
+		max-width: 410px
+		height: 310px
+		margin-bottom: 15px
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	.js-scroll
+		width: 100%
+		height: 635px
+		overflow: auto
+		+clr
+	.jspTrack
+		width: 4px
+		margin: 0 auto
+		background: #5e0d14
+	.jspVerticalBar
+		width: 20px
+		background: none
+	.jspDrag
+		left: -8px
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		background: #5e0d14
+		&:hover
+			background: lighten(#5e0d14, 5%)
+	.jspArrow
+		&.jspArrowUp
+			+s(scroll-arr-up)
+		&.jspArrowDown
+			+s(scroll-arr-down)
+	+r(920)
+		.video__bl
+			float: none
+			width: 100%
+			max-width: 500px
+			margin: 0 auto 15px
+	+r(650)
+		.video__in
+			padding-right: 20px
+			+box
+
+//contacts
+.contacts
+	border-top: 1px solid #8E8E8E
+	.contacts__head
+		position: relative
+		min-height: 100px
+		background: url('../img/icons/contacts-bg.png') top center no-repeat
+		+box-shadow(inset 0 7px 0px 0px rgba(255,255,255,0.2))
+		z-index: 1
+	.contacts__body
+		position: relative
+		max-width: 956px
+		margin: -10px auto 0
+		padding: 40px 10px 150px
+		font-size: 18px
+		background: #fff
+		color: #033613
+		z-index: 0
+		+box
+	.contacts__bl
+		font-family: "Verdana", Arial, sans-serif
+		+clr
+		&.divider
+			margin: 23px 0 15px
+			height: 43px
+			background: #E9E9E9
+			border-bottom: 1px solid #CCC
+		h1
+			margin-bottom: 10px
+			text-align: center
+			font-size: 31px
+			font-weight: bold
+		a
+			color: #033613
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+		.txt-size-27
+			line-height: 1
+	.contacts__txt
+		margin-left: 12px
+		&:last-child
+			margin-left: 30px
+	.contacts__wrap
+		padding: 0 17px
+		color: #000
+		+box
+		+clr
+	.contacts__sidebar
+		width: 22%
+		padding-right: 8%
+		h3
+			text-align: center
+			text-transform: uppercase
+			font-size: 16px
+	.contacts__table
+		margin-top: 20px
+		width: 100%
+		tr
+			td
+				&:first-child
+					padding-right: 5%
+		td
+			padding: 2px 0
+			vertical-align: middle
+			font-size: 14px
+			img
+				display: block
+				margin: 0 auto
+				max-height: 30px
+	.contacts__form
+		width: 70%
+		font-size: 14px
+		.bg-yellow
+			margin-bottom: 10px
+			padding: 10px 8px
+	.form__row
+		margin-bottom: 20px
+	.btn
+		margin-top: 20px
+
+
+//footer
+.footer
+	min-height: 122px
+	margin-top: -130px
+	padding-top: 75px
+	overflow: hidden
+	.l-center
+		position: relative
+	.footer-bg
+		position: absolute
+		top: 0
+		left: -448px
+		width: 1920px
+		height: 122px
+		background: url('../img/footer-bg.png') top center no-repeat
+		z-index: 1
+	.footer__in
+		position: relative
+		padding-left: 217px
+		z-index: 2
+		+clr
+	.logo
+		margin: -68px 0 0 64px
+	.footer__social
+		margin: 30px 25px 0 25px
+		font-size: 0
+		a
+			display: inline-block
+			margin-left: 5px
+			&:first-child
+				margin-left: 0
+		.vk_ico-big
+			+s(vk_ico-big)
+		.ok_ico-big
+			+s(ok_ico-big)
+		.fb_ico-big
+			+s(fb_ico-big)
+	.footer__copyright
+		margin-top: 45px
+		color: #FFF
+		font-family: "Tahoma", Arial, sans-serif
+		font-size: 10px
+		line-height: 1
+	.footer__sign
+		margin: 40px 42px 0 0
+	.balls
+		position: absolute
+		top: -55px
+		right: 70px
+		+rotate(5)

@@ -41,21 +41,21 @@ html
 									a.fb_ico(href="#")
 								ul.onright.navigation__menu
 									li
-										a.menu__link(href="about") О клубе
+										a.menu__link(href="#about") О клубе
 									li
-										a.menu__link(href="news") Новости
+										a.menu__link(href="#news") Новости
 									li
-										a.menu__link(href="stat") Статистика
+										a.menu__link(href="#stat") Статистика
 									li
-										a.menu__link(href="team") Команда
+										a.menu__link(href="#team") Команда
 									li
-										a.menu__link(href="schedule") Расписание
+										a.menu__link(href="#schedule") Расписание
 									li
-										a.menu__link(href="photo") Фото
+										a.menu__link(href="#photo") Фото
 									li
-										a.menu__link(href="video") Видео
+										a.menu__link(href="#video") Видео
 									li
-										a.menu__link(href="contacts") Контакты
+										a.menu__link(href="#contacts") Контакты
 				.l-center
 					.main-slider
 						.js-slick
@@ -96,22 +96,34 @@ html
 							i.onleft.info_ico
 							.onleft.about__bl
 								h3 <i>“Про Американский Футбол</i>
-								p
-									| История АФ <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-								p
-									| Знакомство с АФ <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								.about__links
+									span История АФ
+									.links__wrap
+										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								.about__links
+									span Знакомство с АФ
+									.links__wrap
+										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
 							.onleft.about__bl
 								h3 <i>“Команда мастеров</i>
-								p
-									| Условия вступления <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-								p
-									| Официальные документы <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								.about__links
+									span Условия вступления
+									.links__wrap
+										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								.about__links
+									span Официальные документы
+									.links__wrap
+										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
 							.onleft.about__bl
 								h3 <i>“Детская команда</i>
-								p
-									| Условия вступления <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
-								p
-									| Официальные документы <a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								.about__links
+									span Условия вступления
+									.links__wrap
+										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
+								.about__links
+									span Официальные документы
+									.links__wrap
+										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
 			.l-wrap
 				.news
 					.l-center
@@ -244,7 +256,7 @@ html
 									.stat__name.onright
 										img(src="img/hogs_logo.png" alt="hogskids logo")
 										p HogsKids
-							.stat__bl
+							.stat__bl.is-small-width
 								h2 Проведенные игры
 								p.stat__date
 									| 11 сентября, 12:00
@@ -284,8 +296,210 @@ html
 									h3 Игроки
 									.stat__player
 										img.onleft(src="img/photos/news3.jpg" alt="player")
-										p.is-first Cornerback
+										.stat__txt
+											p Cornerback
+											p Максим
+											p Холодницкий
+			.l-wrap.with-bg
+				.team
+					.l-center
+						.team__head
+							.onleft.title
+								i.title_ico
+								h2 Команда
+							.sign
+							.onright.name
+								img.name__img(src="img/name2.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+								p.onright.name__huntersluga
+									| huntersluga.ru
+						.team__body
+							h3.team__title Состав
+							.team__in
+								.team__bl.onleft
+									h4 <span>Защита</span>
+									.team__person.onleft
+										.team__img
+											img(src="img/photos/news3.jpg" alt="СВ")
+										p СВ
 										p Максим
 										p Холодницкий
+								.team__bl.onright
+									h4 <span>Нападение</span>
+									.team__person.onleft
+										.team__img
+											img(src="img/photos/no-photo.jpg" alt="QB")
+										p QB
+										p Дмитрий
+										p Матвеев
+									.team__person.onleft
+										.team__img
+											img(src="img/photos/attack.jpg" alt="FB")
+										p FB
+										p Артём
+										p Кадыков
+							h3.team__title Тренеры, сотрудники
+							.team__in.another-padding
+								.team__bl.onleft
+									.team__person.onleft
+										.team__img
+											img(src="img/photos/news2.jpg" alt="Тренер")
+										p Тренер
+										p Iris
+										p Burton
+									.team__person.onleft
+										.team__img
+											img(src="img/photos/no-photo.jpg" alt="Тренер")
+										p Тренер
+										p Денис
+										p Бацкалович
+									.team__person.onleft
+										.team__img
+											img(src="img/photos/no-photo.jpg" alt="Тренер")
+										p Тренер
+										p Артём
+										p Михайлов
+			//- .l-wrap
+			//- 	.schedule
+			//- 		.l-center
+			//- 			.schedule__head
+			//- 				.onleft.title
+			//- 					i.title_ico
+			//- 					h2 Расписание
+			//- 				.sign
+			//- 				.onright.name
+			//- 					img.name__img(src="img/name2.png" alt="Hunters name")
+			//- 					p.name__txt
+			//- 						| Клуб по Американскому футболу
+			//- 						span  Hunters
+			//- 					p.onright.name__huntersluga
+			//- 						| huntersluga.ru
+			.l-wrap
+				.video
+					.l-center
+						.video__head
+							.onleft.title
+								i.title_ico
+								h2 Видео
+							.sign
+							.onright.name
+								img.name__img(src="img/name2.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+								p.onright.name__huntersluga
+									| huntersluga.ru
+						.video__body
+							.js-scroll
+								.video__in
+									.video__bl.onleft
+										iframe(src="https://www.youtube.com/embed/difQDd2KQXs" frameborder="0" allowfullscreen)
+									.video__bl.onright
+										iframe(src="https://www.youtube.com/embed/rTbAQPxQFx0" frameborder="0" allowfullscreen)
+									.video__bl.onleft
+										iframe(src="https://www.youtube.com/embed/difQDd2KQXs" frameborder="0" allowfullscreen)
+									.video__bl.onright
+										iframe(src="https://www.youtube.com/embed/rTbAQPxQFx0" frameborder="0" allowfullscreen)
+									.video__bl.onleft
+										iframe(src="https://www.youtube.com/embed/difQDd2KQXs" frameborder="0" allowfullscreen)
+									.video__bl.onright
+										iframe(src="https://www.youtube.com/embed/rTbAQPxQFx0" frameborder="0" allowfullscreen)
+			.l-wrap.with-bg
+				.contacts
+					.l-center
+						.contacts__head
+							.onleft.title
+								i.title_ico
+								h2 Контакты
+							.sign
+							.onright.name
+								img.name__img(src="img/name2.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+								p.onright.name__huntersluga
+									| huntersluga.ru
+						.contacts__body
+							.contacts__bl
+								h1 СК «ОХОТНИКИ»
+								.contacts__txt.onleft
+									p.txt-size-23
+										| Клуб по американскому футболу HUNTERS.
+									p
+										| Официальный сайт клуба - <a class="is-upper" href="http://xn--e1abgbaidcwja5asg0b.xn--p1ai/"><b>ЛУЖСКИЕОХОТНИКИ.РФ</b></a>
+								.contacts__txt.onleft
+									p.txt-size-27
+										| Тел. +7 (965) 072-0103
+									a(href="mailto: e-mail: info@huntersluga.ru")
+										| e-mail: info@huntersluga.ru
+							.contacts__bl.divider
+							.contacts__wrap
+								.contacts__sidebar.onleft
+									h3 Текущий состав
+									.contacts__table
+										table
+											tr
+												td
+													img(src="img/photos/no-photo2.jpg" alt="no-photo")
+												td
+													| Матвеев Дмитрий
+											tr
+												td
+													img(src="img/photos/news3.jpg" alt="news3")
+												td
+													| Холодницкий Максим
+											tr
+												td
+													img(src="img/photos/attack.jpg" alt="attack")
+												td
+													| Кадыков Артём
+								.contacts__form.onleft
+									.bg-yellow
+										p
+											| После подачи заявки, её будет рассматривать администрация команды <span class="txt-green">Лужские Охотники</span>.
+										p
+											| Это может занять некоторое время
+									form.form
+										.form__row
+											p Фамилия:
+											input.input(type="text")
+										.form__row
+											p Имя:
+											input.input(type="text")
+										.form__row
+											p Email:
+											input.input(type="email")
+											p Мы вышлем Вам пароль по указанному контакту
+										.form__row
+											p Сообщение для администратора сайта
+											textarea.textarea
+											button.btn.bg-green(type="button")
+												| Отправить заявку на вступление
+			.l-wrap
+				footer.footer
+					.l-center
+						.footer-bg
+						a(href="#").logo
+							img(src="img/logo.png" alt="Hunters logo")
+						.footer__in
+							.footer__social.onleft
+								a.vk_ico-big(href="#")
+								a.ok_ico-big(href="#")
+								a.fb_ico-big(href="#")
+							.balls
+								img(src="img/balls.png" alt="Balls")
+							.footer__copyright.onleft
+								p © 2014 -2015 Спортивный клуб «ОХОТНИКИ» - клуб по американскому футболу HUNTERS.
+								p Любое копирование материалов возможно только с разрешения администрации сайта.
+							.footer__sign.onright
+								a(href="#")
+									img(src="img/copyright.png" alt="copyright")
+
+
+
+
+
 
 		script(src="js/lib/head.js", data-headjs-load="js/init.js")
