@@ -24,9 +24,33 @@
 		+clr
 	.name
 		margin: 15px 0 0 10px
+	.mobile__nav
+		position: relative
+		display: none
+		margin: 40px 20px 0 0
+		width: 25px
+		height: 16px
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		cursor: pointer
+		+box-shadow(0px -2px 0 rgba(0, 93, 32, 0.5), 0px 3px 1px rgba(0, 93, 32, 0.5))
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			width: 100%
+			height: 2px
+			background: #FFF
+			+box-shadow(0px 2px 0px rgba(#005d20, 0.5))
 	+r(1000)
 		.balls
 			display: none
+	+r(650)
+		.mobile__nav
+			display: block
+		.header-bg
+			left: -495px
 
 .name
 	margin: 10px 35px 0 0
@@ -54,9 +78,13 @@
 	float: left
 	margin: 17px 0 0 62px
 	z-index: 2
+	width: 155px
+	height: 155px
 	img
-		width: 155px
-		height: 155px
+		width: 100%
+		height: 100%
+	+r(650)
+		margin: 17px 0 0 15px
 
 .balls
 	margin: 12px 0 0 14px
@@ -98,6 +126,8 @@
 		border-top: 3px solid #76a586
 		border-bottom: 3px solid #76a586
 	.l-center
+		padding: 0 10px
+		+box
 		+clr
 	.navigation__address
 		margin-top: -24px
@@ -113,6 +143,9 @@
 		+clr
 	.navigation__menu
 		margin: 7px 10px 0 0
+		+clr
+		&.is-visible
+			display: block
 		li
 			float: left
 			margin-left: 5px
@@ -133,7 +166,6 @@
 		&:hover
 			color: #017C2B
 			background: url('../img/icons/link-bg-h.png') repeat
-
 	.navigation__social
 		margin-top: 7px
 		font-size: 0
@@ -148,6 +180,47 @@
 			+s(ok_ico)
 		.fb_ico
 			+s(fb_ico)
+	+r(1000)
+		.navigation__inner
+			padding: 10px 0 20px
+		.navigation__menu
+			width: 100%
+			margin: 10px 0 0
+			text-align: right
+			font-size: 0
+			li
+				float: none
+				display: inline-block
+		.navigation__address
+			margin: 23px 0 0 10px
+	+r(860)
+		.menu__link
+			padding: 5px 11px
+	+r(650)
+		.helmet_ico
+			display: none
+		.navigation__inner
+			padding: 0
+		.navigation__menu
+			display: none
+			position: absolute
+			top: -40px
+			right: 20px
+			margin: 0
+			li
+				display: block
+				margin-bottom: 5px
+		.navigation__social
+			float: none
+			text-align: right
+		.navigation__address
+			float: none
+			padding-left: 140px
+			margin-top: 15px
+			text-align: right
+		.menu__link
+			display: inline-block
+			min-width: 100px
 
 
 //main slider
@@ -362,7 +435,7 @@
 	height: 91px
 	left: 50%
 	margin-left: -200px
-	background: url('../img/icons/line2.png') center center no-repeat
+	background: url('../img/icons/line.png') center center no-repeat
 	&:before
 		content: ""
 		position: absolute
@@ -503,7 +576,7 @@
 			margin-bottom: 10px
 			background: #2fb259
 			+box-shadow(2.5px 4.3px 5px rgba(0, 0, 0, 0.75))
-	+r(800)
+	+r(860)
 		.news__body
 			max-width: inherit
 		.news__column
@@ -512,6 +585,8 @@
 	+r(650)
 		.news__column
 			width: 100%
+			padding: 0 5%
+			+box
 
 
 //statistic section
@@ -671,9 +746,11 @@
 			border-bottom: 1px solid #D8D8D8
 			&.is-small-width
 				width: 50%
-	+r(600)
+	+r(650)
 		.stat__bl
 			width: 100%
+			padding: 0 7%
+			+box
 			&.is-small-width
 				width: 100%
 
@@ -877,7 +954,9 @@
 	.contacts__txt
 		margin-left: 12px
 		&:last-child
-			margin-left: 30px
+			margin-left: 0
+			padding-left: 2%
+			+box
 	.contacts__wrap
 		padding: 0 17px
 		color: #000
@@ -915,6 +994,35 @@
 		margin-bottom: 20px
 	.btn
 		margin-top: 20px
+	+r(920)
+		.contacts__txt
+			float: none
+			margin: 0 0 20px
+			padding: 0 2%
+			text-align: center
+			+box
+		.contacts__bl
+			.txt-size-27
+				font-size: 23px
+				line-height: 1.4
+			.txt-size-23
+				font-size: 21px
+				margin-bottom: 5px
+	+r(650)
+		.contacts__sidebar
+			float: none
+			width: 100%
+			padding: 0
+		.contacts__form
+			float: none
+			width: 100%
+			margin-top: 20px
+		.contacts__table
+			max-width: 300px
+			margin: 20px auto 0
+		.btn
+			display: block
+			margin: 20px auto 0
 
 
 //footer
@@ -933,6 +1041,7 @@
 		height: 122px
 		background: url('../img/footer-bg.png') top center no-repeat
 		z-index: 1
+		+cover
 	.footer__in
 		position: relative
 		padding-left: 217px
@@ -946,14 +1055,19 @@
 		a
 			display: inline-block
 			margin-left: 5px
+			width: 54px
+			height: 54px
 			&:first-child
 				margin-left: 0
 		.vk_ico-big
-			+s(vk_ico-big)
+			background: url(../img/icons/vk_ico-big.png) no-repeat
+			+cover
 		.ok_ico-big
-			+s(ok_ico-big)
+			background: url(../img/icons/ok_ico-big.png) no-repeat
+			+cover
 		.fb_ico-big
-			+s(fb_ico-big)
+			background: url(../img/icons/fb_ico-big.png) no-repeat
+			+cover
 	.footer__copyright
 		margin-top: 45px
 		color: #FFF
@@ -967,3 +1081,55 @@
 		top: -55px
 		right: 70px
 		+rotate(5)
+	+r(1000)
+		.footer__copyright
+			width: 53%
+	+r(920)
+		.footer__copyright
+			margin-top: 40px
+		.balls
+			display: none
+		.footer__sign
+			margin-right: 4%
+	+r(860)
+		.footer__copyright
+			width: 85%
+			margin: 0
+			padding: 10px 10px 10px 25px
+			+box
+		.footer__social
+			float: none
+			margin-top: 0
+			padding-top: 20px
+			a
+				width: 40px
+				height: 38px
+		.footer__sign
+			margin-top: 0
+	+r(650)
+		.logo
+			position: absolute
+			width: 130px
+			height: 130px
+			margin-left: 30px
+			background: #fff
+			border: 6px solid #fff
+			border-radius: 50%
+			z-index: 3
+		.footer__social
+			margin: 0
+			padding-left: 180px
+		.footer__copyright
+			width: 85%
+			padding: 35px 20px 20px
+		.footer__in
+			padding-left: 0
+		.footer-bg
+			display: none
+		.footer__in
+			min-height: 122px
+			background: url(../img/icons/footer-bg.png) repeat
+		.footer__sign
+			float: left
+			margin-top: 30px
+			margin-bottom: 10px
