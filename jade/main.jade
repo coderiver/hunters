@@ -5,6 +5,7 @@ html
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="initial-scale=1")
 		link(rel="stylesheet", href="css/screen.css" media="screen,print")
+		link(rel="stylesheet", href="css/fullcalendar.min.css" media="screen,print")
 		<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 		title main
 	body
@@ -58,13 +59,13 @@ html
 									li
 										a.menu__link(href="#contacts") Контакты
 				.l-center
-					.main-slider
+					.main__slider
 						.js-slick
 							div.slide(style = "background-image: url('img/photos/slide1.jpg');")
 							div.slide(style = "background-image: url('img/photos/slide1.jpg');")
 							div.slide(style = "background-image: url('img/photos/slide1.jpg');")
 			.l-wrap
-				.about
+				.about(id="about")
 					.l-center
 						.about__head
 							.onleft.title
@@ -126,7 +127,7 @@ html
 									.links__wrap
 										<a class="txt-red" href="#">pdf</a><a href="#">doc</a>
 			.l-wrap
-				.news
+				.news(id="news")
 					.l-center
 						.news__head
 							.news__in
@@ -227,7 +228,7 @@ html
 										p
 											| <span>Архив</span> новостей команды
 			.l-wrap
-				.stat
+				.stat(id="stat")
 					.l-center
 						.stat__head
 							.onleft.title
@@ -302,7 +303,7 @@ html
 											p Максим
 											p Холодницкий
 			.l-wrap.with-bg
-				.team
+				.team(id="team")
 					.l-center
 						.team__head
 							.onleft.title
@@ -362,23 +363,65 @@ html
 										p Тренер
 										p Артём
 										p Михайлов
-			//- .l-wrap
-			//- 	.schedule
-			//- 		.l-center
-			//- 			.schedule__head
-			//- 				.onleft.title
-			//- 					i.title_ico
-			//- 					h2 Расписание
-			//- 				.sign
-			//- 				.onright.name
-			//- 					img.name__img(src="img/name2.png" alt="Hunters name")
-			//- 					p.name__txt
-			//- 						| Клуб по Американскому футболу
-			//- 						span  Hunters
-			//- 					p.onright.name__huntersluga
-			//- 						| huntersluga.ru
 			.l-wrap
-				.video
+				.schedule(id="schedule")
+					.l-center
+						.schedule__head
+							.onleft.title
+								i.title_ico
+								h2 Расписание
+							.sign
+							.onright.name
+								img.name__img(src="img/name2.png" alt="Hunters name")
+								p.name__txt
+									| Клуб по Американскому футболу
+									span  Hunters
+								p.onright.name__huntersluga
+									| huntersluga.ru
+						.schedule__body
+							.schedule__ttl
+								button.onleft.btn(type="button") Поделиться...
+								h3 Календарь команды
+							.calendar
+			.l-wrap
+				.photo(id="photo")
+					.l-center
+						.photo__head
+							.photo__in
+								.onleft.title
+									i.title_ico
+									h2 Фото
+								.sign
+								.onright.name
+									img.name__img(src="img/name2.png" alt="Hunters name")
+									p.name__txt
+										| Клуб по Американскому футболу
+										span  Hunters
+									p.onright.name__huntersluga
+										| huntersluga.ru
+						.photo__body
+							.photo__slider
+								.js-slick
+									img(src="img/photos/slide2.jpg" alt = "" data-number="2")
+									img(src="img/photos/slide1.jpg" alt = "" data-number="1")
+									img(src="img/photos/slide1.jpg" alt = "" data-number="1")
+									img(src="img/photos/slide2.jpg" alt = "" data-number="2")
+									img(src="img/photos/slide2.jpg" alt =""  data-number="3")
+									img(src="img/photos/slide1.jpg" alt =""  data-number="3")
+									img(src="img/photos/slide2.jpg" alt =""  data-number="1")
+									img(src="img/photos/slide1.jpg" alt =""  data-number="1")
+						.photo__footer
+							.photo__albums
+								.js-slick
+									div.slide(style = "background-image: url('img/photos/photo-album1.jpg');" data-tab="1")
+									div.slide(style = "background-image: url('img/photos/photo-album2.jpg');" data-tab="2")
+									div.slide(style = "background-image: url('img/photos/photo-album3.jpg');" data-tab="3")
+									div.slide(style = "background-image: url('img/photos/photo-album1.jpg');" data-tab="2")
+									div.slide(style = "background-image: url('img/photos/photo-album2.jpg');" data-tab="2")
+									div.slide(style = "background-image: url('img/photos/photo-album3.jpg');" data-tab="1")
+
+			.l-wrap
+				.video(id="video")
 					.l-center
 						.video__head
 							.onleft.title
@@ -408,7 +451,7 @@ html
 									.video__bl.onright
 										iframe(src="https://www.youtube.com/embed/rTbAQPxQFx0" frameborder="0" allowfullscreen)
 			.l-wrap.with-bg
-				.contacts
+				.contacts(id="contacts")
 					.l-center
 						.contacts__head
 							.onleft.title

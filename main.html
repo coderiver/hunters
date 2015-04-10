@@ -4,7 +4,8 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="initial-scale=1"/>
-    <link rel="stylesheet" href="css/screen.css" media="screen,print"/><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/screen.css" media="screen,print"/>
+    <link rel="stylesheet" href="css/fullcalendar.min.css" media="screen,print"/><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
     <title>main</title>
   </head>
   <body>
@@ -46,7 +47,7 @@
           </div>
         </div>
         <div class="l-center">
-          <div class="main-slider">
+          <div class="main__slider">
             <div class="js-slick">
               <div style="background-image: url('img/photos/slide1.jpg');" class="slide"></div>
               <div style="background-image: url('img/photos/slide1.jpg');" class="slide"></div>
@@ -56,7 +57,7 @@
         </div>
       </div>
       <div class="l-wrap">
-        <div class="about">
+        <div id="about" class="about">
           <div class="l-center">
             <div class="about__head">
               <div class="onleft title"><i class="title_ico"></i>
@@ -120,7 +121,7 @@
         </div>
       </div>
       <div class="l-wrap">
-        <div class="news">
+        <div id="news" class="news">
           <div class="l-center">
             <div class="news__head">
               <div class="news__in">
@@ -182,7 +183,7 @@
         </div>
       </div>
       <div class="l-wrap">
-        <div class="stat">
+        <div id="stat" class="stat">
           <div class="l-center">
             <div class="stat__head">
               <div class="onleft title"><i class="title_ico"></i>
@@ -262,7 +263,7 @@
         </div>
       </div>
       <div class="l-wrap with-bg">
-        <div class="team">
+        <div id="team" class="team">
           <div class="l-center">
             <div class="team__head">
               <div class="onleft title"><i class="title_ico"></i>
@@ -330,7 +331,65 @@
         </div>
       </div>
       <div class="l-wrap">
-        <div class="video">
+        <div id="schedule" class="schedule">
+          <div class="l-center">
+            <div class="schedule__head">
+              <div class="onleft title"><i class="title_ico"></i>
+                <h2>Расписание</h2>
+              </div>
+              <div class="sign"></div>
+              <div class="onright name"><img src="img/name2.png" alt="Hunters name" class="name__img"/>
+                <p class="name__txt">Клуб по Американскому футболу<span> Hunters</span></p>
+                <p class="onright name__huntersluga">huntersluga.ru</p>
+              </div>
+            </div>
+            <div class="schedule__body">
+              <div class="schedule__ttl">
+                <button type="button" class="onleft btn">Поделиться...</button>
+                <h3>Календарь команды</h3>
+              </div>
+              <div class="calendar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-wrap">
+        <div id="photo" class="photo">
+          <div class="l-center">
+            <div class="photo__head">
+              <div class="photo__in">
+                <div class="onleft title"><i class="title_ico"></i>
+                  <h2>Фото</h2>
+                </div>
+                <div class="sign"></div>
+                <div class="onright name"><img src="img/name2.png" alt="Hunters name" class="name__img"/>
+                  <p class="name__txt">Клуб по Американскому футболу<span> Hunters</span></p>
+                  <p class="onright name__huntersluga">huntersluga.ru</p>
+                </div>
+              </div>
+            </div>
+            <div class="photo__body">
+              <div class="photo__slider">
+                <div class="js-slick"><img src="img/photos/slide2.jpg" alt="" data-number="2"/><img src="img/photos/slide1.jpg" alt="" data-number="1"/><img src="img/photos/slide1.jpg" alt="" data-number="1"/><img src="img/photos/slide2.jpg" alt="" data-number="2"/><img src="img/photos/slide2.jpg" alt="" data-number="3"/><img src="img/photos/slide1.jpg" alt="" data-number="3"/><img src="img/photos/slide2.jpg" alt="" data-number="1"/><img src="img/photos/slide1.jpg" alt="" data-number="1"/></div>
+              </div>
+            </div>
+            <div class="photo__footer">
+              <div class="photo__albums">
+                <div class="js-slick">
+                  <div style="background-image: url('img/photos/photo-album1.jpg');" data-tab="1" class="slide"></div>
+                  <div style="background-image: url('img/photos/photo-album2.jpg');" data-tab="2" class="slide"></div>
+                  <div style="background-image: url('img/photos/photo-album3.jpg');" data-tab="3" class="slide"></div>
+                  <div style="background-image: url('img/photos/photo-album1.jpg');" data-tab="2" class="slide"></div>
+                  <div style="background-image: url('img/photos/photo-album2.jpg');" data-tab="2" class="slide"></div>
+                  <div style="background-image: url('img/photos/photo-album3.jpg');" data-tab="1" class="slide"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="l-wrap">
+        <div id="video" class="video">
           <div class="l-center">
             <div class="video__head">
               <div class="onleft title"><i class="title_ico"></i>
@@ -370,7 +429,7 @@
         </div>
       </div>
       <div class="l-wrap with-bg">
-        <div class="contacts">
+        <div id="contacts" class="contacts">
           <div class="l-center">
             <div class="contacts__head">
               <div class="onleft title"><i class="title_ico"></i>
