@@ -27,7 +27,7 @@ head.ready(function() {
 	});
 	$(window).load(function() {
 	    var scroll = $(window).scrollTop();
-	    if ($('.js-wrap').length>0) {
+	    if ($('.js-wrap').length > 0) {
 	    	if (scroll >= $('.js-wrap').offset().top) {
 	    	    $(".js-wrap").addClass("is-fixed");
 	    	} else {
@@ -119,9 +119,11 @@ head.ready(function() {
 	$('.menu__link').click(function (i) {
 
 		i.preventDefault();
-		var idscroll = $(this).attr('href');
-		$.scrollTo(idscroll, 800);
-		console.log(idscroll);
+		var page = $(this).attr("href");
+		var navHeight = $('.navigation__in').outerHeight();
+		$('html, body').animate({
+			scrollTop: $(page).offset().top - navHeight
+		}, 800);
 
 	});
 
