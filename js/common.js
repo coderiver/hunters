@@ -13,6 +13,29 @@ head.ready(function() {
 
 	});
 
+	//fixed header
+	$(window).scroll(function() {
+
+	    var scroll = $(window).scrollTop();
+	    if ($('.js-wrap').length > 0) {
+	    	if (scroll >= $('.js-wrap').offset().top) {
+	    	    $(".js-wrap").addClass("is-fixed");
+	    	} else {
+	    	    $(".js-wrap").removeClass("is-fixed");
+	    	};
+	    };
+	});
+	$(window).load(function() {
+	    var scroll = $(window).scrollTop();
+	    if ($('.js-wrap').length>0) {
+	    	if (scroll >= $('.js-wrap').offset().top) {
+	    	    $(".js-wrap").addClass("is-fixed");
+	    	} else {
+	    	    $(".js-wrap").removeClass("is-fixed");
+	    	};
+	    };
+	});
+
 	//sliders
 	$('.main__slider .js-slick').slick({
 		dots: true,

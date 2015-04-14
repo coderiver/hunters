@@ -24,31 +24,10 @@
 		+clr
 	.name
 		margin: 15px 0 0 10px
-	.mobile__nav
-		position: relative
-		display: none
-		margin: 40px 20px 0 0
-		width: 25px
-		height: 16px
-		border-top: 2px solid #fff
-		border-bottom: 2px solid #fff
-		cursor: pointer
-		+box-shadow(0px 1px 0 rgba(0, 93, 32, 0.5), inset 0px 1px 0 rgba(0, 93, 32, 0.5))
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			margin-top: -1px
-			width: 100%
-			height: 2px
-			background: #FFF
-			+box-shadow(0px 1px 0px rgba(#005d20, 0.5))
 	+r(1000)
 		.balls
 			display: none
 	+r(650)
-		.mobile__nav
-			display: block
 		.header-bg
 			left: -495px
 
@@ -121,7 +100,38 @@
 	z-index: 1
 	+box
 	+box-shadow(inset 0px -2.4px 0px 0px rgba(0, 0, 0, 0.3))
+	&.is-fixed
+		z-index: 5
+		.navigation__in
+			position: fixed
+			top: 0
+			width: 100%
+			background: rgba(#fff, 0.7)
+			.navigation__menu
+				width: auto
+			.navigation__address
+				display: none
+			.navigation__social
+				display: none
+	.mobile__nav
+		position: relative
+		display: none
+		margin: 27px 0 0 20px
+		width: 25px
+		height: 16px
+		border-top: 2px solid rgba(0, 93, 32, 0.5)
+		border-bottom: 2px solid rgba(0, 93, 32, 0.5)
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			width: 100%
+			height: 2px
+			background: rgba(0, 93, 32, 0.5)
 	.navigation__in
+		position: relative
 		background: rgba(#fff, 0.5)
 		border-top: 3px solid #76a586
 		border-bottom: 3px solid #76a586
@@ -181,6 +191,9 @@
 		.fb_ico
 			+s(fb_ico)
 	+r(1000)
+		&.is-fixed
+			.navigation__inner
+				padding: 0
 		.navigation__inner
 			padding: 10px 0 20px
 		.navigation__menu
@@ -193,10 +206,27 @@
 				display: inline-block
 		.navigation__address
 			margin: 23px 0 0 10px
+	+r(720)
+		&.is-fixed
+			.navigation__menu
+				float: none
+				text-align: center
+			.helmet_ico
+				display: none
 	+r(860)
 		.menu__link
 			padding: 5px 11px
 	+r(650)
+		&.is-fixed
+			.navigation__menu
+				text-align: right
+				top: 45px
+			.mobile__nav
+				margin-top: 13px
+			.helmet_ico
+				display: block
+		.mobile__nav
+			display: block
 		.helmet_ico
 			display: none
 		.navigation__inner
@@ -204,8 +234,8 @@
 		.navigation__menu
 			display: none
 			position: absolute
-			top: -40px
-			right: 20px
+			top: 70px
+			right: 10px
 			margin: 0
 			li
 				display: block
