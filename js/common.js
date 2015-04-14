@@ -25,7 +25,7 @@ head.ready(function() {
 		slidesToScroll: 1,
 		infinite: false,
 		customPaging: function(slick , index) {
-		    return '<div class="thumbs" style="background-image: url(img/photos/slide' + slick.$slides.attr('data-number') + '.jpg)">' + '</div>';
+		    return '<div class="thumbs" style="background-image: url(img/photos/slide' + slick.$slides.eq(index).attr('data-number') + '.jpg)">' + '</div>';
 		}
 	});
 
