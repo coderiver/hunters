@@ -1,5 +1,18 @@
 head.ready(function() {
 
+	var clickEventType=((document.ontouchstart !== null) ?'click':'touchstart');
+
+	//onresize
+	$(window).resize(function() {
+		$('.js-scroll').jScrollPane({
+			showArrows: true,
+			verticalDragMaxHeight: 20,
+		});
+
+		getData();
+
+	});
+
 	//sliders
 	$('.main__slider .js-slick').slick({
 		dots: true,
@@ -9,49 +22,62 @@ head.ready(function() {
 	$('.photo__slider .js-slick').slick({
 		dots: true,
 		slidesToShow: 1,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		infinite: false,
+		customPaging: function(slick , index) {
+		    return '<div class="thumbs" style="background-image: url(img/photos/slide' + slick.$slides.attr('data-number') + '.jpg)">' + '</div>';
+		}
 	});
 
 	$('.photo__albums .js-slick').slick({
 		slidesToShow: 3,
-		slidesToScroll: 3
+		slidesToScroll: 3,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 720,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					infinite: false
+				}
+			},
+			{
+				breakpoint: 475,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: false
+				}
+			}
+		]
 	});
 
-	// function getData(){
+	function getData(){
 
-	// 	var album = $('.photo__albums').find('.slide');
-	// 	var slide = $('.photo__slider').find('.js-slick').children('img');
+		var slider = $('.photo__slider .js-slick');
+		var album = $('.photo__albums').find('.slick-slide');
 
-	// 	console.log(slide);
+		album.on(clickEventType, function(){
 
-	// 	album.click(function () {
+			var filtered = false;
+			var tab = $(this).attr('data-tab');
 
-	// 		var y = $(this).attr('data-tab');
-	// 		var x = slide.children().attr('data-number');
+			if (filtered === false) {
+				slider.slick('slickFilter', function(){
+					return $(this).attr("data-number") !== tab;
+				});
+				filtered = true;
+			}
+		});
+	}
 
-	// 	// if(x == y){
-	// 	// 	slide.slick('slickFilter','data-number');
-	// 	// }
-
-	// 		console.log(x);
-	// 	});
-
-	// }
-
-	// getData();
-
+	getData();
 
 	// scroll for video section
 	$('.js-scroll').jScrollPane({
 		showArrows: true,
 		verticalDragMaxHeight: 20,
-	});
-
-	$(window).resize(function() {
-		$('.js-scroll').jScrollPane({
-			showArrows: true,
-			verticalDragMaxHeight: 20,
-		});
 	});
 
 	//navigation menu

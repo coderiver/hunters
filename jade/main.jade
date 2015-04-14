@@ -402,24 +402,64 @@ html
 						.photo__body
 							.photo__slider
 								.js-slick
-									img(src="img/photos/slide2.jpg" alt = "" data-number="2")
-									img(src="img/photos/slide1.jpg" alt = "" data-number="1")
-									img(src="img/photos/slide1.jpg" alt = "" data-number="1")
-									img(src="img/photos/slide2.jpg" alt = "" data-number="2")
-									img(src="img/photos/slide2.jpg" alt =""  data-number="3")
-									img(src="img/photos/slide1.jpg" alt =""  data-number="3")
-									img(src="img/photos/slide2.jpg" alt =""  data-number="1")
-									img(src="img/photos/slide1.jpg" alt =""  data-number="1")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide2.jpg');" data-number="2")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide2.jpg');" data-number="2")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide2.jpg');" data-number="2")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide2.jpg');" data-number="2")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-image: url('img/photos/slide1.jpg');" data-number="1")
+									div(style = "background-color: grey;" data-number="3")
 						.photo__footer
 							.photo__albums
 								.js-slick
-									div.slide(style = "background-image: url('img/photos/photo-album1.jpg');" data-tab="1")
-									div.slide(style = "background-image: url('img/photos/photo-album2.jpg');" data-tab="2")
-									div.slide(style = "background-image: url('img/photos/photo-album3.jpg');" data-tab="3")
-									div.slide(style = "background-image: url('img/photos/photo-album1.jpg');" data-tab="2")
-									div.slide(style = "background-image: url('img/photos/photo-album2.jpg');" data-tab="2")
-									div.slide(style = "background-image: url('img/photos/photo-album3.jpg');" data-tab="1")
-
+									div(style = "background-image: url('img/photos/photo-album1.jpg');" data-tab="1")
+										.album__name
+											p.onleft
+												| 2001-2013 год
+											span.onright
+												i
+												| 13
+									div(style = "background-image: url('img/photos/photo-album2.jpg');" data-tab="2")
+										.album__name
+											p.onleft
+												| Финляндия 1999-2001 год
+											span.onright
+												i
+												| 47
+									div(style = "background-image: url('img/photos/photo-album3.jpg');" data-tab="1")
+										.album__name
+											p.onleft
+												| Череповецкая осень, 5-6 октября
+											span.onright
+												i
+												| 53
+									div(style = "background-image: url('img/photos/photo-album1.jpg');" data-tab="2")
+										.album__name
+											p.onleft
+												| 2001-2013 год
+											span.onright
+												i
+												| 13
+									div(style = "background-image: url('img/photos/photo-album2.jpg');" data-tab="1")
+										.album__name
+											p.onleft
+												| Финляндия 1999-2001 год
+											span.onright
+												i
+												| 47
+									div(style = "background-image: url('img/photos/photo-album3.jpg');" data-tab="2")
+										.album__name
+											p.onleft
+												| Череповецкая осень, 5-6 октября
+											span.onright
+												i
+												| 53
 			.l-wrap
 				.video(id="video")
 					.l-center
